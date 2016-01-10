@@ -1,0 +1,10 @@
+<!-- main layout template that holds the header and the postList templates-->
+
+<template name="layout">
+    <!--<div class="container">-->
+        {{>header}}
+        <div id="main" class="row-fluid">
+            {{> yield}}
+        </div>
+    <!--</div>-->
+</template>

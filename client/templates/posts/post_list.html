@@ -1,0 +1,9 @@
+<!-- template to loop through posts -->
+
+<template name="postList">
+    <div class="posts">
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+    </div>
+</template>

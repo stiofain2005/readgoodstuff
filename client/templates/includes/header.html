@@ -1,0 +1,42 @@
+<!-- template for the top of the site nav bar -->
+
+<template name="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">ReadGoodStuff</a>
+            </div>
+            <ul class = "nav navbar-nav">
+                <li id="all"><a href="/">All</a></li>
+                <li id="tech"><a href="/">Tech</a></li>
+                <li id="business"><a href="/">Business</a></li>
+                <li id="health"><a href="/">Health</a></li>
+                <li id="culture"><a href="/">Culture</a></li>
+                <li id="sport"><a href="/">Sport</a></li>
+                <li id="random"><a href="/">Random</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- if user is logged in then show add post & Filter otherwise sign up -->
+                {{#if currentUser}}
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="/">Filter
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Today</a></li>
+                        <li><a href="#">This Week</a></li>
+                        <li><a href="#">This Month</a></li>
+                        <li><a href="#">This Year</a></li>
+                        <li><a href="#">All Time</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{pathFor 'postSubmit'}}">Add Post</a></li>
+                {{/if}}
+                {{>loginButtons}}
+
+            </ul>
+        </div>
+    </nav>
+    <div id="main" class="row-fluid">
+        {{> yield}}
+    </div>
+</template>

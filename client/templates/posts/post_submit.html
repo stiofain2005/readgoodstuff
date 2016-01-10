@@ -1,0 +1,31 @@
+<!-- template to add Post -->
+
+<template name="postSubmit">
+    <form class="main form">
+        <div class="form-group">
+            <label class="control-label" for="url">URL</label>
+            <div class="controls">
+                <input name="url" id="url" type="text" value="" placeholder="Your URL
+" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input name="title" id="title" type="text" value="" placeholder="Name
+ your post" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="category">Category</label>
+            <select class="form-control" id="category">
+                <option>Tech</option>
+                <option>Business</option>
+                <option>Health</option>
+                <option>Culture</option>
+                <option>Random</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary"/>
+    </form>
+</template>
