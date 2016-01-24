@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a41625b3-20de-4d7a-a438-943ffd7438a1" name="Default" comment="no duplicate posts get added">
+    <list default="true" id="a41625b3-20de-4d7a-a438-943ffd7438a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="readgoodstuff.iws" />
@@ -387,7 +387,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453628882354</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="no duplicate posts get added">
+      <created>1453628892580</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1453628892580</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
