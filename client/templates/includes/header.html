@@ -2,10 +2,7 @@
 
 <template name="header">
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">ReadGoodStuff</a>
-            </div>
+
             <ul class = "nav navbar-nav">
                 <li id="all"><a href="/">All</a></li>
                 <li id="tech"><a href="/">Tech</a></li>
@@ -34,7 +31,6 @@
                 {{>loginButtons}}
 
             </ul>
-        </div>
     </nav>
     <div id="main" class="row-fluid">
         {{> yield}}

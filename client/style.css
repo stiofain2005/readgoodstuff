@@ -203,3 +203,26 @@ a {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+#post-list{
+  padding-left:50px;
+}
+
+#post-list-container{
+  border-style: solid;
+  height: 550px;
+  width: 900px;
+  margin-left: 150px;
+}
+
+.navbar-nav{
+  padding-left: 35px;
+}
+
+#posts-navbar{
+  width: 750px;
+  margin-top:5px;
+  margin-bottom: 0px;
+  min-height:20px;
+}
+
