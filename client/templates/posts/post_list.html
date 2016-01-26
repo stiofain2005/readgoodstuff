@@ -1,19 +1,25 @@
 <!-- template to loop through posts -->
 
 <template name="postList">
-    <div id="post-list-container">
-        <nav id="posts-navbar" class="navbar navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li id="navbar-left-arrow" class="glyphicon glyphicon-chevron-left"></li>
-                <li id="navbar-right-arrow" class="glyphicon glyphicon-chevron-right"></li>
-            </ul>
-        </nav>
-            <div id="post-list" class="col-sm-11">
-                <div class="posts">
-                    {{#each posts}}
-                        {{> postItem}}
-                    {{/each}}
+    <div class="container">
+        <div id="post-list-container">
+            <div id="posts-navbar" class="navbar navbar">
+                <!--<ul class="nav navbar-nav" id="arrows">
+                    <li id="navbar-left-arrow" class="glyphicon glyphicon-chevron-left"></li>
+                    <li id="navbar-right-arrow" class="glyphicon glyphicon-chevron-right"></li>
+                </ul>-->
+                <div id="arrows">
+                    <a id="navbar-left-arrow" class="glyphicon glyphicon-chevron-left"></a>
+                    <a id="navbar-right-arrow" class="glyphicon glyphicon-chevron-right"></a>
                 </div>
             </div>
+                <div id="post-list" class="col-sm-11">
+                    <div class="posts">
+                        {{#each posts}}
+                            {{> postItem}}
+                        {{/each}}
+                    </div>
+                </div>
+        </div>
     </div>
 </template>

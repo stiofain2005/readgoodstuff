@@ -210,19 +210,26 @@ a {
 
 #post-list-container{
   border-style: solid;
-  height: 550px;
-  width: 900px;
-  margin-left: 150px;
+  height: auto;
+  width:auto;
+  /*margin-left: 150px;*/
+  overflow:hidden;
+  /*height:1%;*/
 }
 
 .navbar-nav{
-  padding-left: 35px;
+  /*padding-left: 35px;*/
 }
 
-#posts-navbar{
+/*#posts-navbar{
   width: 750px;
   margin-top:5px;
   margin-bottom: 0px;
   min-height:20px;
+}*/
+
+#arrows{
+  text-align: center;
+  vertical-align: middle;
 }
 

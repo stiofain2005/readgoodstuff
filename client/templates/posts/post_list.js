@@ -26,7 +26,7 @@ Template.postList.events({
 
     'click #navbar-right-arrow': function(e) {
         var skipTemp = Session.get('skip') ;
-        Session.set('skip', skipTemp+5);
+        Session.set('skip', skipTemp+7);
     },
 
     'click #navbar-left-arrow': function(e) {
@@ -35,7 +35,7 @@ Template.postList.events({
             skipTemp = 0;
         }
         else {
-            skipTemp = skipTemp - 5;
+            skipTemp = skipTemp - 7;
         }
 
         Session.set('skip', skipTemp);

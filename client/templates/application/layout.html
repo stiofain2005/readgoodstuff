@@ -1,15 +1,15 @@
 <!-- main layout template that holds the header and the postList templates-->
 
 <template name="layout">
-    <div class="container-fluid">
+    <div class="container">
         <div class="banner">
             <a href="/" id="rgs-banner">
             <img src="Banner.png" class="img-responsive">
             </a>
         </div>
+    </div>
         {{>header}}
-        <div id="main" class="row-fluid">
-            {{> yield}}
-        </div>
+    <div id="main" class="row-fluid">
+        {{> yield}}
     </div>
 </template>
