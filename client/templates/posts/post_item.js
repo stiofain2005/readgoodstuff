@@ -20,7 +20,6 @@ Template.postItem.events({
     'click a.tracked': function(e) {
         var href = $(e.currentTarget).attr('href');
         var clickPost = Posts.findOne({url:href});
-        console.log(clickPost);
         Meteor.call('postUpdate', clickPost , function(error, result){
             if (error)
                 return alert(error.reason);

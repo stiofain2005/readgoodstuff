@@ -228,8 +228,6 @@ a {
   min-height:20px;
 }*/
 
-#arrows{
-  text-align: center;
-  vertical-align: middle;
+.navbar-custom>li{
+  display:inline-block;
 }
-
