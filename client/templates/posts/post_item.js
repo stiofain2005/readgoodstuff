@@ -11,3 +11,21 @@ Template.postItem.helpers({
     return a.hostname;
     }
 });
+
+Template.postItem.events({
+
+    // set the category session variable to what category is chosen
+    // Session variable is reactive so the postList will auto update
+
+    'click a.tracked': function(e) {
+        var href = $(e.currentTarget).attr('href');
+        var clickPost = Posts.findOne({url:href});
+        console.log(clickPost);
+        Meteor.call('postUpdate', clickPost , function(error, result){
+            if (error)
+                return alert(error.reason);
+        });
+
+    }
+
+});

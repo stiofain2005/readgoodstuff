@@ -10,10 +10,11 @@ Template.postList.helpers({
     // posts object finds all posts or the category that is selected
     posts:function(){
         if(Session.get('category') === ''){
-            return Posts.find({}, {sort: {submitted:-1}, limit:7, skip:Session.get('skip')});
+            return Posts.find({}, {sort: {submitted:-1}}); //, limit:7, skip:Session.get('skip')});
         }
         else{
-            return Posts.find({category:Session.get('category')}, {sort: {submitted:-1}, limit:7, skip:Session.get('skip')});
+            return Posts.find({category:Session.get('category')}, {sort: {submitted:-1}});//, limit:7,
+            // skip:Session.get('skip')});
         }
 
     }
@@ -24,7 +25,7 @@ Template.postList.events({
     // set the category session variable to what category is chosen
     // Session variable is reactive so the postList will auto update
 
-    'click #navbar-right-arrow': function(e) {
+    /*'click #navbar-right-arrow': function(e) {
         var skipTemp = Session.get('skip') ;
         Session.set('skip', skipTemp+7);
     },
@@ -39,7 +40,7 @@ Template.postList.events({
         }
 
         Session.set('skip', skipTemp);
-    }
+    }*/
 
 });
 
