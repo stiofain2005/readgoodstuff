@@ -11,7 +11,9 @@ Template.postSubmit.events({
         url: $(e.target).find('[name=url]').val(),
         title: $(e.target).find('[name=title]').val(),
         category: $(e.target).find('[id=category]').val(),
-        clicks:0
+        clicks:0,
+        userId: Meteor.userId(),
+        user:Meteor.user().username
     };
     // call the postInsert method and either returns a new post id or postexists object
     Meteor.call('postInsert', post, function(error, result){

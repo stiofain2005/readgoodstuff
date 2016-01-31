@@ -11,37 +11,35 @@ Template.header.events({
 
     'click #all': function(e) {
         Session.set('category', '');
-        Session.set('skip', 0);
+
     },
 
     'click #tech': function(e) {
         Session.set('category', 'Tech');
-        Session.set('skip', 0);
+
     },
 
     'click #business': function(e) {
         Session.set('category', 'Business');
-        Session.set('skip', 0);
+
     },
 
     'click #health': function(e) {
         Session.set('category', 'Health');
-        Session.set('skip', 0);
+
     },
 
     'click #culture': function(e) {
         Session.set('category', 'Culture');
-        Session.set('skip', 0);
     },
 
     'click #sport': function(e) {
         Session.set('category', 'Sport');
-        Session.set('skip', 0);
+
     },
 
     'click #random': function(e) {
         Session.set('category', 'Random');
-        Session.set('skip', 0);
     },
 
     'click #Hottest': function(e) {
