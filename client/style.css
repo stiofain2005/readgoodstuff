@@ -231,3 +231,36 @@ a {
 .navbar-custom>li{
   display:inline-block;
 }
+
+.banner{
+  /*position:fixed;
+  /*float:left;*/
+
+  display:inline-block;
+}
+
+.tabs{
+  /*float:right;*/
+  display:inline-block;
+  position:relative;
+  /*display:inline-block;*/
+
+}
+
+#top-container{
+
+  position:relative;
+}
+
+@media screen and (min-width: 68em) {
+  #top-container:before {
+
+  }
+  .tabs{
+
+    position:absolute;
+    right:0;
+    bottom:0;
+
+  }
+}
