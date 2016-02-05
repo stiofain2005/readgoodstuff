@@ -1,4 +1,4 @@
-if (Posts.find().count() === 0) {
+/*if (Posts.find().count() === 0) {
     Posts.insert({
         title: 'Introducing Telescope',
         url: 'http://sachagreif.com/introducing-telescope/',
@@ -26,4 +26,4 @@ if (Posts.find().count() === 0) {
         user:"Test3",
         submitted:new Date((new Date()).getTime() - 1000*60*60*24*8)
     });
-}
+}*/

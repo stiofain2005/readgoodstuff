@@ -1,14 +1,12 @@
 /**
- * Created by stephencampbell on 09/01/2016.
+ * Created by stephencampbell on 05/02/2016.
  */
+Template.ownPostsList.helpers({
+    // ownPost object returns if the current user is equal to the posts userID
+    myPost:function(){
+        return this.userId === Meteor.userId();
+    },
 
-// set the initial default value of 'category' equal to blank
-Session.setDefault('category', '');
-//Session.setDefault('skip',0);
-Session.setDefault('sort','Latest');
-Session.setDefault('filter',0);
-
-Template.postList.helpers({
     posts:function(){
         if(Session.get('category') === ''){
             if(Session.get('sort') === 'Latest'){
@@ -41,7 +39,7 @@ Template.postList.helpers({
                 }
             }
 
-             //, limit:7, skip:Session.get('skip')});
+            //, limit:7, skip:Session.get('skip')});
         }
         else{
             if(Session.get('sort') === 'Latest'){
@@ -77,16 +75,7 @@ Template.postList.helpers({
             // skip:Session.get('skip')});
         }
 
-    },
+    }
     // posts object finds all posts or the category that is selected
 });
-
-Template.postList.events({
-
-    // set the category session variable to what category is chosen
-    // Session variable is reactive so the postList will auto update
-
-
-});
-
 
