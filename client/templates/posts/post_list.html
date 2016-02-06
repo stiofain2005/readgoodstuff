@@ -2,6 +2,24 @@
 
 <template name="postList">
     <div class="container">
+            <div id="posts-navbar" class="navbar navbar-default">
+                <ul class = "nav navbar-nav navbar-custom">
+                    <li id="Hottest"><a href="/">Hottest</a></li>
+                    <li id="Latest"><a href="/">Latest</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/">Filter By
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="T"><a href="#">Today</a></li>
+                            <li id="TW"><a  href="#">This Week</a></li>
+                            <li id="TM"><a href="#">This Month</a></li>
+                            <li id="TY"><a href="#">This Year</a></li>
+                            <li id="AT"><a href="#">All Time</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         <div id="post-list-container">
 
                 <div id="post-list" class="col-sm-11">

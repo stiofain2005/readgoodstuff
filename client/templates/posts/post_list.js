@@ -16,13 +16,13 @@ Template.postList.helpers({
                     //console.log("1Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({}, {sort: {submitted:-1}});
+                    return Posts.find({publish:true}, {sort: {submitted:-1}});
                 }
                 else{
                     //console.log("2Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {submitted:-1}});
+                    return Posts.find({publish:true, submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {submitted:-1}});
                 }
 
             }
@@ -31,13 +31,13 @@ Template.postList.helpers({
                     //console.log("3Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({}, {sort: {clicks:-1}});
+                    return Posts.find({publish:true}, {sort: {clicks:-1}});
                 }
                 else{
                     //console.log("4Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {clicks:-1}});
+                    return Posts.find({publish:true, submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {clicks:-1}});
                 }
             }
 
@@ -49,13 +49,13 @@ Template.postList.helpers({
                     //console.log("1Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({category:Session.get('category')}, {sort: {submitted:-1}});
+                    return Posts.find({publish:true, category:Session.get('category')}, {sort: {submitted:-1}});
                 }
                 else{
                     //console.log("2Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({category:Session.get('category'), submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {submitted:-1}});
+                    return Posts.find({publish:true, category:Session.get('category'), submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {submitted:-1}});
                 }
 
             }
@@ -64,13 +64,13 @@ Template.postList.helpers({
                     //console.log("3Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({category:Session.get('category')}, {sort: {clicks:-1}});
+                    return Posts.find({publish:true, category:Session.get('category')}, {sort: {clicks:-1}});
                 }
                 else{
                     //console.log("4Category " + Session.get('category'));
                     //console.log("Sort " + Session.get('sort'));
                     //console.log("Filter " + Session.get('filter'));
-                    return Posts.find({category:Session.get('category'), submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {clicks:-1}});
+                    return Posts.find({publish:true, category:Session.get('category'), submitted : {$gte : new Date((new Date()).getTime() - Session.get('filter'))}}, {sort: {clicks:-1}});
                 }
             }
             //return Posts.find({category:Session.get('category')}, {sort: {submitted:-1}});//, limit:7,

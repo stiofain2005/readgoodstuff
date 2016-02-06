@@ -6,11 +6,11 @@ var cookieId = getCookie("userId");
 
 Tracker.autorun(function(){
     if(Meteor.userId()){
-        //console.log(Meteor.user().username);
+        //console.log(cookieId + "   " + Meteor.userId());
         if(cookieId != Meteor.userId()){
             setCookie("userId", Meteor.userId(), 365);
             setCookie("userName", Meteor.user().username, 365);
-            //console.log("setting the cookie");
+
         }
     }
 });

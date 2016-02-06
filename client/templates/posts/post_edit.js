@@ -4,6 +4,14 @@ Template.postEdit.events({
         // prevent the default action
         e.preventDefault();
 
+        var publishVar;
+        if(document.getElementById('publishBox').checked){
+            publishVar = true;
+        }
+        else{
+            publishVar = false;
+        }
+
         // get the current post id
         var currentPostId = this._id;
 
@@ -11,7 +19,8 @@ Template.postEdit.events({
         var postProperties = {
             url: $(e.target).find('[name=url]').val(),
             title: $(e.target).find('[name=title]').val(),
-            category: $(e.target).find('[id=category]').val()
+            category: $(e.target).find('[id=category]').val(),
+            publish:publishVar
         };
 
         // update the current post and use mongo set equal to the new attributes

@@ -6,25 +6,36 @@ Template.postSubmit.events({
     // the event has an argument called event(e). Event.target is the form */
 
     'submit form': function(e) {
-    e.preventDefault();
-    var post = {
-        url: $(e.target).find('[name=url]').val(),
-        title: $(e.target).find('[name=title]').val(),
-        category: $(e.target).find('[id=category]').val(),
-        clicks:0,
-        userId: Meteor.userId(),
-        user:Meteor.user().username
-    };
-    // call the postInsert method and either returns a new post id or postexists object
-    Meteor.call('postInsert', post, function(error, result){
-        if (error)
-            return alert(error.reason);
 
-        if(result.postExists)
-            alert('This link has already been posted')
 
-        Router.go('postPage', {_id: result._id});
-    });
+        e.preventDefault();
+        var publishVar;
+        if(document.getElementById('publishBox').checked){
+            publishVar = true;
+        }
+        else{
+            publishVar = false;
+        }
 
-}
+        var post = {
+            url: $(e.target).find('[name=url]').val(),
+            title: $(e.target).find('[name=title]').val(),
+            category: $(e.target).find('[id=category]').val(),
+            clicks:0,
+            userId: Meteor.userId(),
+            user:Meteor.user().username,
+            publish:publishVar
+        };
+        // call the postInsert method and either returns a new post id or postexists object
+        Meteor.call('postInsert', post, function(error, result){
+            if (error)
+                return alert(error.reason);
+
+            if(result.postExists)
+                alert('This link has already been posted')
+
+            Router.go('postPage', {_id: result._id});
+        });
+
+    }
 });
