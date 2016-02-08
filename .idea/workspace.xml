@@ -561,7 +561,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454771675675</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Posts go to myposts unless published">
+      <created>1454964938846</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1454964938846</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
