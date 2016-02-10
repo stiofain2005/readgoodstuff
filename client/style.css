@@ -9,7 +9,7 @@
 
 body {
   background: #ffffff;
-  color: #666666; }
+  color: #000000; }
 
 #main {
   position: relative;
@@ -20,8 +20,24 @@ body {
   width: 100%;
 }
 
+h3,h4{
+  color:#000000;
+}
+
 a {
-  color: #9d9d9d;
+  color: #737373;
+}
+
+#edit-button{
+  color: #0066ff;;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:#737373;
+}
+
+.collapse.navbar-collapse.navHeaderCollapse{
+  padding-left: 0;
 }
 
 .navbar {
@@ -208,7 +224,7 @@ a {
   padding-left:50px;
 }
 
-#post-list-container{
+.post-list-container{
   border-style: solid;
   height: auto;
   width:auto;
@@ -264,3 +280,15 @@ a {
 
   }
 }
+#h4-centered{
+  text-align: center;
+}
+
+.steve-note{
+  color:#009933;
+}
+
+.post-list-container p{
+  padding-left: 10px;
+  padding-right:10px;
+  }
