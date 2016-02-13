@@ -7,7 +7,9 @@
 
             <div id="post-list" class="col-sm-11">
                 <div class="posts">
+                    <!-- go through each post -->
                     {{#each posts}}
+                        <!-- if the post user is the same as the current user -->
                         {{#if myPost}}
                             {{> postItem}}
                         {{/if}}

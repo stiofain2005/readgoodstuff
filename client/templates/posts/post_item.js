@@ -1,5 +1,6 @@
 Template.postItem.helpers({
-    // ownPost object returns if the current user is equal to the posts userID
+
+    // ownPost object returns if the current user is equal to the posts userID or if Mark or Steve
     ownPost:function(){
         return this.userId === Meteor.userId() || Meteor.user().username === "steve" || Meteor.user().username === "mark";
     },
@@ -14,13 +15,11 @@ Template.postItem.helpers({
 
 Template.postItem.events({
 
-    // set the category session variable to what category is chosen
-    // Session variable is reactive so the postList will auto update
-
+    // if the link is clicked call method in post.js that updates the clicks
     'click a.tracked': function(e) {
         var href = $(e.currentTarget).attr('href');
         var clickPost = Posts.findOne({url:href});
-        Meteor.call('postUpdate', clickPost , function(error, result){
+        Meteor.call('postUpdateClick', clickPost , function(error, result){
             if (error)
                 return alert(error.reason);
         });

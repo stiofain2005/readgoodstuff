@@ -9,6 +9,8 @@ Template.postSubmit.events({
 
 
         e.preventDefault();
+
+        /* if user wants to publish set variable */
         var publishVar;
         if(document.getElementById('publishBox').checked){
             publishVar = true;
@@ -17,6 +19,7 @@ Template.postSubmit.events({
             publishVar = false;
         }
 
+        // set post to the user input
         var post = {
             url: $(e.target).find('[name=url]').val(),
             title: $(e.target).find('[name=title]').val(),
@@ -32,7 +35,7 @@ Template.postSubmit.events({
                 return alert(error.reason);
 
             if(result.postExists)
-                alert('This link has already been posted')
+                alert('This link has already been posted');
 
             Router.go('postList');
         });

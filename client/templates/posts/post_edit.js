@@ -4,6 +4,7 @@ Template.postEdit.events({
         // prevent the default action
         e.preventDefault();
 
+        // if user chooses to publish the post or unpublish using dropdown
         var publishVar;
         if($(e.target).find('[id=publishGroup]').val() === 'Publish'){
             publishVar = true;
@@ -24,26 +25,28 @@ Template.postEdit.events({
             publish:publishVar
         };
 
-        // update the current post and use mongo set equal to the new attributes
-        Posts.update(currentPostId, {$set: postProperties}, function(error) {
+        // call postUpdate defined in posts.js
+        Meteor.call('postUpdate', postProperties, function(error, result){
             if (error) {
-                // display the error to the user
-                console.log(Meteor.user());
-                alert(error.reason);
+                return alert(error.reason);
             }
-            else {
-                // go to the discussion page of the post after update
-                Router.go('postList');
+            if(result.postExists) {
+                alert('This link has already been posted');
             }
+            // go the postList route which is the main page
+            Router.go('postList');
         });
     },
+
     // if delete is clicked
     'click .delete': function(e) {
         e.preventDefault();
         if (confirm("Delete this post?")) {
             var currentPostId = this._id;
+
             // remove the post from the database
             Posts.remove(currentPostId);
+
             // go the postList route which is the main page
             Router.go('postList');
         }
