@@ -5,12 +5,13 @@ Template.postEdit.events({
         e.preventDefault();
 
         var publishVar;
-        if(document.getElementById('publishBox').checked){
+        if($(e.target).find('[id=publishGroup]').val() === 'Publish'){
             publishVar = true;
         }
         else{
             publishVar = false;
         }
+
 
         // get the current post id
         var currentPostId = this._id;
@@ -32,7 +33,7 @@ Template.postEdit.events({
             }
             else {
                 // go to the discussion page of the post after update
-                Router.go('postPage', {_id: currentPostId});
+                Router.go('postList');
             }
         });
     },

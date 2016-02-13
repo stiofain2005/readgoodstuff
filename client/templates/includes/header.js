@@ -42,38 +42,7 @@ Template.header.events({
         Session.set('category', 'Random');
     },
 
-    'click #Hottest': function(e) {
-        Session.set('sort', 'Hottest');
-    },
 
-    'click #Latest': function(e) {
-        Session.set('sort', 'Latest');
-    },
-
-    'click #T': function(e) {
-        var filterDate = 1000*60*60*24;
-        Session.set('filter', filterDate);
-    },
-
-    'click #TW': function(e) {
-        var filterDate = 1000*60*60*24*7;
-        Session.set('filter', filterDate);
-    },
-
-    'click #TM': function(e) {
-        var filterDate = 1000*60*60*24*31;
-        Session.set('filter', filterDate);
-    },
-
-    'click #TY': function(e) {
-        var filterDate = 1000*60*60*24*365;
-        Session.set('filter', filterDate);
-    },
-
-    'click #AT': function(e) {
-        var filterDate = 0;
-        Session.set('filter', filterDate);
-    }
 });
 
 

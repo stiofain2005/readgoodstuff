@@ -5,7 +5,12 @@
     <div class="post-content">
       <h3><a href="{{url}}" target="_blank" class="tracked">{{title}}</a><span style="color:#000000">{{domain}}</span></h3>
         <p>
-            submitted by {{user}} in {{category}}
+            {{#if publish}}
+                Published by
+            {{else}}
+                Saved by
+            {{/if}}
+            {{user}} in {{category}}
             <!-- show the edit button if it the user's post -->
             {{#if ownPost}}<a id="edit-button" href="{{pathFor 'postEdit'}}" >Edit</a>{{/if}}
         </p>
