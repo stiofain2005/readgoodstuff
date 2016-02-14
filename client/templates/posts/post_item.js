@@ -10,7 +10,28 @@ Template.postItem.helpers({
     var a = document.createElement('a');
     a.href = this.url;
     return a.hostname;
-    }
+    }/*,
+
+    colour:function(){
+        if(this.category === 'Tech'){
+            return '#ccd9ff';
+        }
+        else if(this.category === 'Business'){
+            return '#f2e6d9'
+        }
+        else if(this.category === 'Health'){
+            return '#ccffff'
+        }
+        else if(this.category === 'Culture'){
+            return '#ffcccc'
+        }
+        else if(this.category === 'Sport'){
+            return '#d9ffcc'
+        }
+        else if(this.category === 'Random'){
+            return '#ffccf2'
+        }
+    }*/
 });
 
 Template.postItem.events({
