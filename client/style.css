@@ -221,11 +221,13 @@ a {
 }
 
 #post-list{
-  padding-left:50px;
+  /*padding-left:50px;*/
+  padding-left: 3px;
+  padding-right: 1px;
 }
 
 .post-list-container{
-  border-style: solid;
+  /*border-style: solid;*/
   height: auto;
   width:auto;
   /*margin-left: 150px;*/
@@ -289,6 +291,10 @@ a {
 }
 
 .post-list-container p{
-  padding-left: 10px;
-  padding-right:10px;
-  }
+  /*padding-left: 10px;
+  padding-right:10px;*/
+}
+
+.posts{
+  margin-bottom:15px;
+}

@@ -26,14 +26,12 @@ Template.postEdit.events({
         };
 
         // call postUpdate defined in posts.js
-        Meteor.call('postUpdate', postProperties, function(error, result){
-            if (error) {
+        Meteor.call('postUpdate', currentPostId, postProperties, function(error, result){
+            if (error)
                 return alert(error.reason);
-            }
-            if(result.postExists) {
+            if(result.postExists)
                 alert('This link has already been posted');
-            }
-            // go the postList route which is the main page
+
             Router.go('postList');
         });
     },
