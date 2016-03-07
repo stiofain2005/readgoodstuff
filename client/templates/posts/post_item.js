@@ -39,6 +39,11 @@ Template.postItem.events({
     // if the link is clicked call method in post.js that updates the clicks
     'click a.tracked': function(e) {
         var href = $(e.currentTarget).attr('href');
+
+        ga('send', 'event', 'outbound', 'click', href, {
+            'transport': 'beacon'
+        });
+
         var clickPost = Posts.findOne({url:href});
         Meteor.call('postUpdateClick', clickPost , function(error, result){
             if (error)
